@@ -1,0 +1,11 @@
+
+# NOTAS DE DESARROLLO #
+
+
+(16/12/24)
+
+Hoy se inicia (por 7ma vez) el proyecto integrador de POO, un sistema de gestion de clientes para un gimnacio,
+basicamente hoy voy a crear las clases basicas, y hacer una primera conexion con mi BD.
+Lo que de por momento mas se me complica es estructurar el esquema o diagrama de clases ya que me confunde un poco
+como hacerlo y llevar el registro de entrenamiento de los usuarios, si bien tengo una base (gracias a un amigo),
+se me sigue haciendo complicado estructurarlo, aun que voy a seguir trabajando en eso.
