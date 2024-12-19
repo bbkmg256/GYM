@@ -9,3 +9,11 @@ basicamente hoy voy a crear las clases basicas, y hacer una primera conexion con
 Lo que de por momento mas se me complica es estructurar el esquema o diagrama de clases ya que me confunde un poco
 como hacerlo y llevar el registro de entrenamiento de los usuarios, si bien tengo una base (gracias a un amigo),
 se me sigue haciendo complicado estructurarlo, aun que voy a seguir trabajando en eso.
+
+
+(18/12/24)
+
+Se termino de definir lo basico de las clases principales, ademas de que se soluciono problemas con depedencias 
+de base de datos no funcionales (no era posible la conexion a la BD con la dependencia antes empleada).
+
+Por el momento faltas hacer el mapeo con JPA de las clase y sus relaciones.
