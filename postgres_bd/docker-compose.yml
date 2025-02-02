@@ -1,7 +1,7 @@
 
 # Compose para la base de datos de la aplicacion GYM
 
-version: '3.8'
+# version: '3.8' # atributo obsoleto
 
 services:
   postgres:
@@ -18,3 +18,7 @@ services:
 
 volumes:
   postgres_data:
+
+
+# Para ingresar a psql de forma interactiva
+# docker exec -it postgres_container sh -c "psql -h localhost -U tecded -d GYM_DB"
