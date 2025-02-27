@@ -7,26 +7,51 @@ El cliente es un cliente que tiene un tutor y un entrenamiento asignado, fin.
 
 */
 
+// Paquete
 package edu.unam.modelo;
 
 // Libs
+import java.io.Serializable;
 import java.util.Date;
+import java.util.ArrayList;
+
+import javax.persistence.Basic; // Modulo JPA para atributos basicos
+import javax.persistence.Entity; // Modulo JPA para entidades/objetos
+
+// Modulos JPA para generacion de ID, valores de generación de ID y forma de generación de ID
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
+// Modulo JPA para atributos referentes a fechas
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  *
  * @author bbkmg
  */
-public class Cliente {
+@Entity
+public class Cliente implements Serializable {
 	// Atributos
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int dni;
+
+	@Basic
 	private String nombre;
 	private String apellido;
-	private Date fechaNacimiento;
 	private char sexo;
 	private String ciudad;
 	private String provincia;
 	private int codigoPostal;
+
+	@Temporal(TemporalType.DATE)
+	private Date fechaNacimiento;
 	private Date fechaIngreso;
+	
+	// atributo relación con clase Entrenamiento (Lista)
+	// private ArrayList<Entrenamiento> entrenamientos_c = new ArrayList<>();
 	
 	// Constructor
         Cliente(int paramDni, String paramNombre, String paramApellido,

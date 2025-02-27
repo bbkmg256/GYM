@@ -9,30 +9,58 @@ puntua el servicio del tutor.
 
 */
 
+// Paquete
 package edu.unam.modelo;
 
+// Libs
 import java.util.Date;
+import java.util.ArrayList;
+
+import javax.persistence.Basic; // Modulo JPA para atributos basicos
+import javax.persistence.Entity; // Modulo JPA para entidades/objetos
+
+// Modulos JPA para generacion de ID, valores de generación de ID y forma de generación de ID
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
+// Modulo JPA para atributos referentes a fechas
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  *
  * @author bbkmg
  */
+@Entity
 public class Entrenamiento {
 	// Atributos
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int idEntrenamiento;
+	
+	@Basic
 	private int puntaje; // Puntuación por parte del cliente al tutor.
-	private Date fechaInicio;
-	private Date fechaFin;
 	
 	// Volumen de entrenamiento semanal
 	// (si no estoy mal, es lo que se entreno en la semana).
 	private int volumenEntrenamiento;
+
+	@Temporal(TemporalType.DATE)
+	private Date fechaInicio;
+	private Date fechaFin;	
 	
 	// atributo relacion a clase Cliente
+	// private Cliente cliente;
+	
 	// atributo relacion a clase Tutor
-	// atributo relacion a clase Rutina
-	// atributo relacion a clase Seguimiento
-
+	// private Tutor tutor;
+	
+	// atributo relacion a clase Rutina (Lista)
+	// private ArrayList<Rutina> rutinas = new ArrayList<>();
+	
+	// atributo relacion a clase Seguimiento (Lista)
+	// private ArrayList<Seguimiento> seguimientoEntrenamiento = new ArrayList<>();
 	
 	// Constructor
 	Entrenamiento(int paramIdEntre, Date paramFechaInicio, Date paramFechaFin){
