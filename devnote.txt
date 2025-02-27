@@ -17,3 +17,18 @@ Se termino de definir lo basico de las clases principales, ademas de que se solu
 de base de datos no funcionales (no era posible la conexion a la BD con la dependencia antes empleada).
 
 Por el momento faltas hacer el mapeo con JPA de las clase y sus relaciones.
+
+
+(02/02/25)
+
+Creado el fichero de persistencia "persistence.xml"
+
+
+(26/02/25)
+
+Vuelta al proyecto...
+
+Se relacionaron las entidades entre si, pero por el momento esas relciónes están comentadas para no romper nadad
+ademas se debe mapear con @OneToOne o @OneToMany y así para las interrelaciones de entidades para la BD.
+
+
